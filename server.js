@@ -12,10 +12,43 @@ app.use(express.json());
 // =============================================================
 var reservations = [
     {
-        name: "yoda",
-        phone: "444-444-4444",
-        email: "Jedi_Master@gmail.com",
-        id: 900,
+        customerName: "asdf",
+        phoneNumber: "2123051742",
+        customerEmail: "mdb2160@cumc.columbia.edu",
+        customerID: "1",
+    },
+    {
+        customerName: "James A Rowe",
+        phoneNumber: "17174337699",
+        customerEmail: "jamesrowe@outlook.com",
+        customerID: "2",
+    },
+    {
+        customerName: "James A Rowe",
+        phoneNumber: "17174337699",
+        customerEmail: "jamesrowe@outlook.com",
+        customerID: "4",
+    },
+    {
+        customerName: "James A Rowe",
+        phoneNumber: "17174337699",
+        customerEmail: "jamesrowe@outlook.com",
+        customerID: "5",
+    },
+    {
+        customerName: "James A Rowe",
+        phoneNumber: "17174337699",
+        customerEmail: "jamesrowe@outlook.com",
+        customerID: "6",
+    },
+];
+
+var waitlist = [
+    {
+        customerName: "Link",
+        customerEmail: "link@email.com",
+        phoneNumber: "123-456-7890",
+        customerID: "1234",
     },
 ];
 // Routes
@@ -27,7 +60,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/reservation", function (req, res) {
-    res.sendFile(path.join(__dirname, "reservation.html"));
+    res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
 app.get("/tables", function (req, res) {
