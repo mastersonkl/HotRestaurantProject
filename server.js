@@ -56,7 +56,7 @@ var waitlist = [
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "home.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.get("/reservation", function (req, res) {
@@ -74,9 +74,7 @@ app.get("/api/reservations", function (req, res) {
 
 // Create New Reservations- takes in JSON input
 app.post("/api/reservations", function (req, res) {
-   
     var newReservation = req.body;
-
 
     console.log(newReservation);
     reservations.push(newReservation);
